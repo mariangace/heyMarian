@@ -4,10 +4,13 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
-const name = "Marian Garcia";
+const logo = ":)";
+const name = 'Marian Garcia';
+
 export const siteTitle = "Hey, I'm Marian Garcia";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home }: {children: React.ReactNode
+  home?: boolean}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -28,15 +31,7 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt=""
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles.headingXl}>{logo}</h1>
           </>
         ) : (
           <>
