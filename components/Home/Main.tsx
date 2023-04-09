@@ -1,11 +1,13 @@
-import React from 'react'
-import utilStyles from "../../styles/utils.module.css";
+import React from "react";
 import {
   faInstagram,
   faLinkedinIn,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import utilStyles from "../../styles/utils.module.css";
+import styles from "../../styles/Home.module.css";
 
 const social = [
   {
@@ -27,23 +29,32 @@ const social = [
 
 export default function Main() {
   return (
-    <section className={utilStyles.heading3Xl}>
-      <span>
-        Hey! <br />
-        I&rsquo;m Marian Garcia.
-      </span>
-      <p className={utilStyles.heading2Xl}>
-        Frontend Engineer. JS. ReactJs. NextJs. Typescript.
+    <main>
+      <section className={styles.mainSection}>
+        <span className={utilStyles.heading3Xl}>
+          Hey! <br />
+          I&rsquo;m Marian Garcia.
+        </span>
+        <p className={utilStyles.heading2Xl}>
+          Frontend Engineer. JS. ReactJs. NextJs. Typescript.
+        </p>
         <div>
           {social.map((network) => (
-            <a key={network.name} target="_blank" href={network.url} className={utilStyles.icon}>
-              <FontAwesomeIcon width={25} height={25} icon={network.className} />
+            <a
+              key={network.name}
+              target="_blank"
+              href={network.url}
+              className={utilStyles.icon}
+            >
+              <FontAwesomeIcon
+                width={25}
+                height={25}
+                icon={network.className}
+              />
             </a>
           ))}
         </div>
-      </p>
-      <span>
-    </span>
-  </section>
-  )
+      </section>
+    </main>
+  );
 }
