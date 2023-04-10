@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Footer from "../components/Home/Footer";
+import Footer from "./Home/Footer";
 import styles from "../styles/Layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 
