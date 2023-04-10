@@ -6,7 +6,7 @@
 .title a:hover,
 .title a:focus,
 .title a:active {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .title {
@@ -179,7 +179,7 @@
 .projectCardContainer {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
   animation: opacity 2s ease-in-out;
 }
 
@@ -205,6 +205,10 @@
   flex: 0.8;
   margin-right: 3rem;
   min-height: 550px;
+}
+
+.imageContainer {
+  margin: 0 1rem;
 }
 
 @media (max-width: 900px) {

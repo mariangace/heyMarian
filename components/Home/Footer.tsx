@@ -30,7 +30,6 @@ const social = [
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <p>Created with ❤️ by Marian G.</p>
       <div className={styles.iconsContainer}>
         {social.map((network) => (
           <a
@@ -43,6 +42,7 @@ export default function Footer() {
           </a>
         ))}
       </div>
+      <p>Created with ❤️ by Marian G.</p>
     </footer>
   );
 }

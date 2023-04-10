@@ -4,6 +4,8 @@ import Image from "next/image";
 import utilStyles from "../../styles/utils.module.css";
 import styles from "../../styles/Home.module.css";
 
+const TIMER = 1000 * 10;
+
 type ProjectData = {
   name: string;
   url: string;
@@ -16,9 +18,9 @@ const projects: ProjectData[] = [
     name: "Kwara Connect",
     url: "https://kwara.com/",
     image: {
-      src: "/images/projectKwara.png",
+      src: "/images/kwara.png",
       width: 300,
-      height: 382,
+      height: 566,
     },
     p1: " Kwara offers a modern banking back-office solution for over 120 credit unions and their members.",
     p2: "Connect App enables more than 40,000 members to conveniently access their accounts and perform transactions using their mobile devices.",
@@ -28,8 +30,8 @@ const projects: ProjectData[] = [
     url: "https://www.gokaax.com/",
     image: {
       src: "/images/kaax.png",
-      width: 300,
-      height: 433,
+      width: 400,
+      height: 305,
     },
     p1: "Kaax is Mexico's first international payment platform that allows its users to buy, sell and transfer up to 13 currencies.",
     p2: "KAAX reduced trading time from hours to less than a minute and broker costs by 70%. ",
@@ -39,14 +41,13 @@ const projects: ProjectData[] = [
     url: "https://www.activeterra.com/index.html",
     image: {
       src: "/images/activeT.png",
-      width: 300,
-      height: 441,
+      width: 400,
+      height: 305,
     },
     p1: "Active Terra is a Farm ERP that empowers producers in the agriculture industry.",
     p2: "It provides a data analyzing management platform. It's sensor-agnostic and features an easy-to-use mobile interface.",
   },
 ];
-const TIMER = 1000 * 8;
 
 export default function Projects() {
   const [projectIndex, setProjectIndex] = React.useState(0);
@@ -100,6 +101,7 @@ function Card({
           </div>
           <div className={utilStyles.headingMd}>
             <p>{projects[projectIndex].p1}</p>
+            <br />
             <p>{projects[projectIndex].p2}</p>
           </div>
           <div className={utilStyles.flex}>
@@ -112,13 +114,15 @@ function Card({
             ))}
           </div>
         </div>
-        <Image
-          className={styles.projectImage}
-          src={src}
-          height={height}
-          width={width}
-          alt={name}
-        />
+        <div className={styles.imageContainer}>
+          <Image
+            className={styles.projectImage}
+            src={src}
+            height={height}
+            width={width}
+            alt={name}
+          />
+        </div>
       </div>
     </div>
   );
