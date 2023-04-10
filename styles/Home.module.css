@@ -207,7 +207,7 @@
   min-height: 550px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .container,
   .mainSection,
   .aboutSection,

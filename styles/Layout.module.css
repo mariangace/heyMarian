@@ -13,9 +13,9 @@
 }
 
 .iconsContainer {
-  margin: 1rem;
+  margin-top: 1rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .header {
     position: fixed;
     top: 0;
