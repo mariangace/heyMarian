@@ -207,7 +207,7 @@
   min-height: 550px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .container,
   .mainSection,
   .aboutSection,
@@ -221,6 +221,6 @@
     padding: 1rem;
   }
   .projectsSectiion {
-    padding: 0;
+    padding: 1rem;
   }
 }
