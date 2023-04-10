@@ -12,6 +12,9 @@
   flex-direction: column;
 }
 
+.iconsContainer {
+  margin: 1rem;
+}
 @media (max-width: 600px) {
   .header {
     position: fixed;
