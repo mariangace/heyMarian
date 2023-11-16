@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import Image from "next/image";
 import utilStyles from "../../styles/utils.module.css";
 import styles from "../../styles/Home.module.css";
 
-const TIMER = 1000 * 10;
+const TIMER = 1000 * 15;
 
 type ProjectData = {
   name: string;
@@ -14,6 +14,17 @@ type ProjectData = {
   p2?: string;
 };
 const projects: ProjectData[] = [
+  {
+    name: "Smart Factories",
+    url: "https://www.phantasma.global/",
+    image: {
+      src: "/images/phantasmaLabs.png",
+      width: 400,
+      height: 305,
+    },
+    p1: "Phantasma Labs owns Reinforcement Learning models to process millions of different scenarios to solve complex optimization problems.",
+    p2: "The Smart Factories creates Shift Planning given complex input data.",
+  },
   {
     name: "Kwara Connect",
     url: "https://kwara.com/",
